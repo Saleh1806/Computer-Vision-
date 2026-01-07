@@ -22,6 +22,8 @@ So in practice: **hardware = lens**, **model = pinhole + distortion**.
 ## Useful formulas (comparison)
 
 ### 1) Pinhole projection (ideal model)
+![Pinhole projection diagram](diagrams/pinhole_projection.png)
+
 For a 3D point (X, Y, Z) in the camera frame:
 
 x = f * X / Z  
@@ -39,6 +41,7 @@ K = [ fx  0  cx
       0   0   1 ]
 
 ### 2) Thin lens equation
+![Thin lens focusing diagram](diagrams/thin_lens.png)
 
 1/f = 1/do + 1/di
 
@@ -47,6 +50,8 @@ do: object distance
 di: image distance (sensor side)
 
 ### 3) Circle of confusion (defocus blur)
+![Defocus blur diagram](diagrams/defocus_blur.png)
+
 If a point is not on the focal plane, it becomes a blur disk:
 
 approx: c ≈ A * |di - di0| / di
